@@ -1,0 +1,13 @@
+<h1>（デバッグ用）東京　駅リスト</h1>
+
+<%= @stations.count %>駅<br>
+<table>
+    <% @stations.each do |station| %>
+    <tr>
+      <td><%= station.station_name %></td>
+      <td><%= station.address %></td>
+      <td><%= station.lat %></td>
+      <td><%= station.lon %></td>
+    </tr>
+  <% end %>
+</table>

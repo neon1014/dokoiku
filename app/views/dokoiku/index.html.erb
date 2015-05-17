@@ -1,0 +1,30 @@
+<div class="header">今日どこいく?　東京版</div>
+  <p id="station"><%= @doko.station_name %>駅</p>
+  <p id="address"><%= @doko.address %></p>
+</div>
+<%# google map の埋め込み（座業より自動的に地図が表示される）%>
+<iframe src="http://maps.google.co.jp/maps?q=loc:<%= @doko.lon %>,<%= @doko.lat %>&iwloc=J&output=embed" width="600" height="450" frameborder="0" style="border:0"></iframe>
+
+<!--
+<DIV style="font-size:12px;text-align:center;"><A href="http://www.tenki-yoho.com/cities/63.html" target=_blank><IMG SRC="http://link.tenki-yoho.com/img.php?63,acrweb" alt="東京の天気予報" border=0 width=100 height=100></A><br>-<A href="http://www.tenki-yoho.com/" target=_blank>天気予報コム</A>-</DIV>
+-->
+
+
+<!-- tweet button--><div class="twitter">
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-size="large" data-text="私は今から<%= @doko.station_name %>駅付近を散歩します。">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+<footer>
+  <address> Copyright &copy; 2015 yy. Some Rights Reserved. </address>
+</footer>
+<!--ウェザーニュースブログパーツ-->
+<!--
+<div id="weathernews_blog_parts"></div><script type="text/javascript">document.write('<scr' + 'ipt type="text/javascript" src="http://weathernews.jp/blog/js/blog.js?' + (new Date().valueOf()) + '"></scr' + 'ipt>');</script><script type="text/javascript">// <![CDATA[
+wni_blog('blog/forecast:centeredOn=36',200,36,true);// ]]></script>
+-->
+
+<!-- Yahoo 天気（要Flash）-->
+<!--
+<script>var CFLwidth = "150";var CFLheight = "322";var CFLswfuri = "http://i.yimg.jp/images/weather/blogparts/yj_weather.swf?mapc=13";</script><script type="text/javascript" charset="utf-8" src="http://i.yimg.jp/images/weather/js/promo/weather_utf8.js"></script>
+-->
