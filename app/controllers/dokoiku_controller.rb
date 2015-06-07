@@ -29,15 +29,16 @@ class DokoikuController < ApplicationController
       _index_test(max+3)#=>NG
     end
 
-    @stations = Station.all
+
+    @stations = Stations.all
 
     #randの範囲で動作することを確認済
     @random_id = Random.rand(2..@stations.count+1)
 
     #デバッグ用関数
-    #_check_value_range(@stations.count)
+    _check_value_range(@stations.count)
 
-    @doko = Station.find_by(id: @random_id)
+    @doko = Stations.find_by(id: @random_id)
 
     #render text: @random
   end
