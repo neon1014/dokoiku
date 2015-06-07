@@ -18,3 +18,7 @@
 
 # mac
 .DS_Store
+
+# 未完成のため
+app/controllers/hoge.txt
+app/controllers/test.txt
